@@ -16,3 +16,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
     }
 }
 // alt + strzalka przełącza pomiędzy otwartymi plikami
+// dasdasd
