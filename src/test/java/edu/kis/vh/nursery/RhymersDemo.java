@@ -8,10 +8,10 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 class RhymersDemo {
 
 	public static void main(String[] args) {
-		Rhymersfactory factory = new DefaultRhymersFactory();
-		
-		defaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
-				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
+		final Rhymersfactory FACTORY = new DefaultRhymersFactory();
+
+		defaultCountingOutRhymer[] rhymers = { FACTORY.GetStandardRhymer(), FACTORY.GetFalseRhymer(),
+				FACTORY.GetFIFORhymer(), FACTORY.GetHanoiRhymer()};
 		
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
