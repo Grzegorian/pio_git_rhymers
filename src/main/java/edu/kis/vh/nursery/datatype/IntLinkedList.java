@@ -1,12 +1,10 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.datatype;
 
-public class IntLinkedList {
-
-	Node last;
-	int i;
-
-	private final int EMPTY = -1;
-
+public class IntLinkedList implements IntInterface {
+	
+	private Node last;
+	
+	@Override
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -16,27 +14,31 @@ public class IntLinkedList {
 			last = last.next;
 		}
 	}
-
+	
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
-
+	
+	@Override
 	public boolean isFull() {
 		return false;
 	}
-
+	
+	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY;
+			return EMPTY_RHYMER_INDICATOR;
 		return last.value;
 	}
-
+	
+	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY;
+			return EMPTY_RHYMER_INDICATOR;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
 	}
-
+	
 }
